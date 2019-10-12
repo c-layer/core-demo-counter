@@ -46,12 +46,12 @@ contract("Counter", function (accounts) {
 
   it("should estimate gas for increase counter", async function () {
     const gas = await proxy.increaseCount.estimateGas(42);
-    assert.equal(gas, 110367, "gas");
+    assert.equal(gas, 110294, "gas");
   });
 
   it("should estimate gas for increase counter with no delegate", async function () {
     const gas = await proxy.increaseCountNoDelegate.estimateGas(42);
-    assert.equal(gas, 106280, "gas");
+    assert.equal(gas, 106243, "gas");
   });
 
   describe("with a counter increased", function () {
