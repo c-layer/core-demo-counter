@@ -2,7 +2,7 @@
 
 Counting on multiple counters at once.
 
-This is a demo for the Token Core used in the Compliance Layer (C-Layer).
+This is a demo for the Token Core architecture used in the Compliance Layer (C-Layer).
 
 ## Deploying it
 
