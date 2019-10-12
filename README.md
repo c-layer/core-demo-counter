@@ -17,7 +17,7 @@ Support is given for the reference versions used in the docker image [sirhill/tr
 ```javascript
    let core = await CounterCore.new()
 
-   let proxy = await CounterProxy.new(core.address)```
+   let proxy = await CounterProxy.new(core.address)
 
    let delegate = await CounterDelegate.new();
 ```
