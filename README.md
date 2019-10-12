@@ -35,13 +35,15 @@ Each proxy will dispose of one global counter and individual counters.
 
 When you call `await proxy.increaseCount(42)`, you increase both your personnal counter and the proxy global one.
 
-You can check their value calling `await proxy.count("0x0..YoUr_ADrEsSe..")` for personal counter or `await proxy.globalCount()` for the global counter of the proxy.
+Assuming you are signing transaction as `accounts[0]`, you can check the different counter by calling `await proxy.count(accounts[0])` for personal counter or `await proxy.globalCount()` for the global counter of the proxy.
+
+You can also increase the counter from a different address `await proxy.increaseCount(13, { from: accounts[1] })`. The global counter will be increased to 55 while the two individual counters will be 42 for accounts[0] and 13 for accounts[1].
+
 
 ### Play with the counter for advanced users
 
 Advanced users may also play with `await proxy.increaseCountNoDelegate(42)` to see that you could also count without using delegates. It would be have the same way. You may also check the gas consumption of the different calls.
 
-It is interesting to look at the behavior of the counters when you are using different personal counters for a same proxy `await proxy.increaseCount(42, { from: "0x..AnOtHeR_AdReSsE.."})`
 
 ## Counter contracts description
 
