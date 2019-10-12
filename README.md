@@ -19,12 +19,12 @@ Support is given for the reference versions used in the docker image [sirhill/tr
 
    let proxy = await CounterProxy.new(core.address)
 
-   let delegate = await CounterDelegate.new();
+   let delegate = await CounterDelegate.new()
 ```
 
 4. finally, assign the proxy and the delegate to the core
 ```javascript
-   await core.defineProxyDelegate(proxy.address, delegate.address);
+   await core.defineProxyDelegate(proxy.address, delegate.address)
 ```
 
 ## Play with the counter
