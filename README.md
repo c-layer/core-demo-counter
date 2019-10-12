@@ -15,11 +15,11 @@ Support is given for the reference versions used in the docker image [sirhill/tr
 3. Using truffle (ie `truffle develop`), you may then deploy the Core, a proxy and a delegate
 
 ```javascript
-   let core = await CounterCore.new()
+   core = await CounterCore.new()
 
-   let proxy = await CounterProxy.new(core.address)
+   proxy = await CounterProxy.new(core.address)
 
-   let delegate = await CounterDelegate.new()
+   delegate = await CounterDelegate.new()
 ```
 
 4. finally, assign the proxy and the delegate to the core
